@@ -11,7 +11,8 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Image
 } from "spectacle";
 
 // Import image preloader util
@@ -26,6 +27,12 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  bg: require("../assets/bg_berlin.svg"),
+  browser: require("../assets/browser.svg"),
+  phone: require("../assets/phone.svg"),
+  iot: require("../assets/iot.svg"),
+  server: require("../assets/server.svg"),
+  fin: require("../assets/fin.jpg"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -46,39 +53,87 @@ const theme = createTheme({
 
 export default class Presentation extends React.Component {
   render() {
+
+    const skylineBg = {
+      backgroundImage: `url(${images.bg})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "bottom center",
+      backgroundSize: "100% auto"
+    };
+
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+        {/* Slide 0 Title*/}
+        <Slide transition={["fade"]} style={skylineBg}>
+          <Heading size={3}>JAVASCRIPT RULES</Heading>
+          <Text margin="auto auto 5em auto">
+            Things I learned in Berlin
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+
+        {/* Slide 1 What?*/}
+        <Slide bgColor="tertiary" textColor="primary" >
+          <Heading
+            caps
+            size={3}
+            style={{ letterSpacing: "0.05em" }}>
+            WHAT?
+          </Heading>
+          <Text margin="auto auto 6em auto" textSize="2rem" textColor="primary">
+            JavaScript, NodeJS, React
+          </Text>
         </Slide>
+
+        {/* Slide 2 JS images */}
+        <Slide bgColor="primary" textColor="primary">
+          <Image width="15%" src={images.browser} />
+          <Image width="15%" src={images.server} />
+          <Image width="15%" src={images.phone} />
+          <Image width="15%" src={images.iot} />
+        </Slide>
+
+        {/* Slide 3 WHY? */}
+        <Slide transition={["zoom"]} bgColor="tertiary">
+          <Heading
+            caps
+            size={3}
+            style={{ letterSpacing: "0.05em" }}>
+            WHY?
+          </Heading>
+          <Text margin="auto auto 6em auto" textSize="2rem" textColor="primary">
+            to have fun of course
+          </Text>
+        </Slide>
+
+        {/* Slide 4 Demo */}
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={4} textColor="primary" caps>DEMO</Heading>
+        </Slide>
+
+        {/* Slide 5 HOW? */}
+        <Slide bgColor="tertiary">
+          <Heading
+            caps
+            size={3}
+            style={{ letterSpacing: "0.05em" }}
+          >
+            HOW?
+          </Heading>
+        </Slide>
+
+        {/* Slide 5 what was used */}
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+          <Heading size={6} textColor="secondary" caps>Things involved</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>AWS Lambda, AWS SNS, AWS S3</ListItem>
+            <ListItem>Expo</ListItem>
+            <ListItem>Spectacle</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+
+        {/* Slide 6 FIN*/}
+        <Slide bgColor="black">
+          <Image width="100%" src={images.fin} />
         </Slide>
       </Deck>
     );
