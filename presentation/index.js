@@ -12,7 +12,8 @@ import {
   Quote,
   Slide,
   Text,
-  Image
+  Image,
+  Link
 } from "spectacle";
 
 // Import image preloader util
@@ -121,7 +122,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        {/* Slide 5 what was used */}
+        {/* Slide 6 what was used */}
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Things involved</Heading>
           <List>
@@ -131,9 +132,21 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        {/* Slide 6 FIN*/}
+        {/* Slide 7 FIN*/}
         <Slide bgColor="black">
           <Image width="100%" src={images.fin} />
+        </Slide>
+
+        {/* Slide 8 Useful links*/}
+        <Slide bgColor="white">
+          <Heading caps size={3} style={{ letterSpacing: "0.05em" }}>Useful links:</Heading>
+          <List>
+            <Link href="https://broadcast.amazon.com/videos/70061" target="_blank">
+              <ListItem>UX Served À La Carte presentation video</ListItem>
+            </Link>
+            <ListItem>Expo</ListItem>
+            <ListItem>Spectacle</ListItem>
+          </List>
         </Slide>
       </Deck>
     );
