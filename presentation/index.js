@@ -34,6 +34,7 @@ const images = {
   iot: require("../assets/iot.svg"),
   server: require("../assets/server.svg"),
   fin: require("../assets/fin.jpg"),
+  mic: require("../assets/mic.svg"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
@@ -91,6 +92,7 @@ export default class Presentation extends React.Component {
           <Image width="15%" src={images.server} />
           <Image width="15%" src={images.phone} />
           <Image width="15%" src={images.iot} />
+          <Image width="8%" src={images.mic} style={{marginLeft: "20px"}}/>
         </Slide>
 
         {/* Slide 3 WHY? */}
