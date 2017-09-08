@@ -128,9 +128,9 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Things involved</Heading>
           <List>
-            <ListItem>AWS Lambda, AWS SNS, AWS S3</ListItem>
-            <ListItem>Expo</ListItem>
-            <ListItem>Spectacle</ListItem>
+            <ListItem>DashButton: AWS Lambda, AWS SNS, AWS S3</ListItem>
+            <ListItem>Mobile app: React Native, Expo</ListItem>
+            <ListItem>Presentation: React, Spectacle</ListItem>
           </List>
         </Slide>
 
