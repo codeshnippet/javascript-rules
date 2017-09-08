@@ -1,0 +1,26 @@
+0: The second presentation is about JavaScript.
+This presentation is again split into 3 parts: What? Why? and How?
+
+1: And the What? of this presentation is JavaScript.
+But not only JavaScript, also 2 of the many technologies that come along: NodeJS and React.
+
+2: What do we know about JS?
+It was originally designed to make web pages more dynamic.
+Netscape was one of the first browsers to support JavaScipt.
+Later on JavaScript appeared on server side. And with creation of NodeJS it became a very popular option for SS.
+We know that you can also develop for mobiles with JS. React Native and other technologies give you that.
+Another new trendy thing is Internet of Things devices.
+And you can also develop apps for the voice controlled devices.
+
+3: Why should we care about all that?
+To have fun of course. We are engineers and should enjoy our skills from time to time.
+Question is, how hard it is?
+
+4: DEMO. This is what I wanted to find out. And after a presentation on WebDevCon,
+I decided to try my beginner level JS skills to build couple of apps.
+
+DashButton
+
+Alexa
+
+Android app
