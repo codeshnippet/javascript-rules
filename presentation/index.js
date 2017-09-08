@@ -34,6 +34,9 @@ const images = {
   iot: require("../assets/iot.svg"),
   server: require("../assets/server.svg"),
   fin: require("../assets/fin.jpg"),
+  dash: require("../assets/dash_button.png"),
+  alexa: require("../assets/alexa.png"),
+  iphone: require("../assets/iphone.jpg"),
   mic: require("../assets/mic.svg"),
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
@@ -108,9 +111,22 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
-        {/* Slide 4 Demo */}
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={4} textColor="primary" caps>DEMO</Heading>
+        {/* Slide 4 Dash button*/}
+        <Slide bgColor="white">
+          <Image width="50%" src={images.dash} />
+            <Text margin="auto auto 6em auto" textSize="2rem" textColor="secondary">
+              chuck-norris-facts@amazon.com
+            </Text>
+        </Slide>
+
+        {/* Slide 5 Alexa */}
+        <Slide bgColor="white">
+          <Image width="50%" src={images.alexa} />
+        </Slide>
+
+        {/* Slide 6 Alexa */}
+        <Slide bgColor="white">
+          <Image width="50%" src={images.iphone} />
         </Slide>
 
         {/* Slide 5 HOW? */}
@@ -127,7 +143,7 @@ export default class Presentation extends React.Component {
         {/* Slide 6 what was used */}
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Things involved</Heading>
-          <List>
+          <List width="100%">
             <ListItem>DashButton: AWS Lambda, AWS SNS, AWS S3</ListItem>
             <ListItem>Mobile app: React Native, Expo</ListItem>
             <ListItem>Presentation: React, Spectacle</ListItem>
