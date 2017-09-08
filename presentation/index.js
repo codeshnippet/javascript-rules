@@ -162,8 +162,15 @@ export default class Presentation extends React.Component {
             <Link href="https://broadcast.amazon.com/videos/70061" target="_blank">
               <ListItem>UX Served À La Carte presentation video</ListItem>
             </Link>
-            <ListItem>Alexa skill tutorial</ListItem>
-            <ListItem>Spectacle</ListItem>
+            <Link href="https://www.pluralsight.com/guides/node-js/amazon-alexa-skill-tutorial" target="_blank">
+              <ListItem>Alexa skill tutorial</ListItem>
+            </Link>
+            <Link href="https://expo.io/" target="_blank">
+              <ListItem>Expo homepage</ListItem>
+            </Link>
+            <Link href="https://github.com/FormidableLabs/spectacle" target="_blank">
+              <ListItem>Spectacle presentations homepage</ListItem>
+            </Link>
           </List>
         </Slide>
       </Deck>
