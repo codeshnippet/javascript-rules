@@ -162,7 +162,7 @@ export default class Presentation extends React.Component {
             <Link href="https://broadcast.amazon.com/videos/70061" target="_blank">
               <ListItem>UX Served À La Carte presentation video</ListItem>
             </Link>
-            <ListItem>Expo</ListItem>
+            <ListItem>Alexa skill tutorial</ListItem>
             <ListItem>Spectacle</ListItem>
           </List>
         </Slide>
