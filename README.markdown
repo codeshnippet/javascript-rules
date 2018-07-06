@@ -1,4 +1,7 @@
-# Spectacle Boilerplate
+# Javascript Rules presentation
+
+## Link
+[http://javascript-rules.herokuapp.com/#/](http://javascript-rules.herokuapp.com/#/)
 
 ## Reference
 
